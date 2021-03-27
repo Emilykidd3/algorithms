@@ -6,8 +6,6 @@ In this activity you will be writing code to create a function that takes in a s
 
 ## Instructions
 
-- Open [Unsolved/is-palindrome.js](Unsolved/is-palindrome.js) in your code editor -- **this is the only file you will modify in this activity.**
-
   - In this file you will be writing code in the body of the `isPalindrome` function to achieve the following:
 
     - Return `true` if the given string is a palindrome.
