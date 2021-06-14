@@ -6,10 +6,10 @@
 var arr = [0, 1, 2, 4]
 
 var missingNumber = function(nums) {
-    // if (nums = []) {
-    //     console.log(0);
-    //     return 0;
-    // }
+    if (nums.length === 0) {
+        console.log(0);
+        return 0;
+    }
 
     // sort array
 
