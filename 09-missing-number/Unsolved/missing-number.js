@@ -3,7 +3,7 @@
 // if there is no missing number, use the next number in the array
 // if the array is empty return 0
 
-var arr = [0, 1, 2, 4]
+var arr = [4, 2, 0, 3]
 
 var missingNumber = function(nums) {
     if (nums.length === 0) {
@@ -12,10 +12,13 @@ var missingNumber = function(nums) {
     }
 
     // sort array
+    var newArr = nums.sort((a, b) => {
+        return a - b;
+    })
 
     // loop array
-    for (var i=0; i < nums.length; i++) {
-        if (i !== nums[i]) {
+    for (var i=0; i < newArr.length; i++) {
+        if (i !== newArr[i]) {
             console.log(i)
             return i;
         }
