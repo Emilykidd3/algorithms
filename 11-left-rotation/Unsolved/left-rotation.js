@@ -13,7 +13,11 @@ var arr = [0, 1, 2, 3]
 var positions = 3
 
 var leftRotation = function(arr, positions) {
- arr.shift()
+    for (var i = 0; i < positions; i++) {
+        var shiftedNum = arr[0]
+        arr.shift()
+    }
+    console.log(shiftedNum)
 };
 
 leftRotation(arr, positions);
