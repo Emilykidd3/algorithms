@@ -12,6 +12,10 @@ var arr = [1, 2, 3]
 
 var positions = 2
 
+// shift removes the first item from an array
+// pop removes the last item from an array
+// push adds an item to the end of an array
+
 var leftRotation = function(arr, positions) {
     for (var i = 0; i < positions; i++) {
         var shiftedNum = arr[0]
