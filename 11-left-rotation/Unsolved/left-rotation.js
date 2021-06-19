@@ -8,16 +8,16 @@
 // push the digit to the end of the array
 // loop as many times as the positions variable
 
-var arr = [0, 1, 2, 3]
+var arr = [1, 2, 3]
 
-var positions = 3
+var positions = 2
 
 var leftRotation = function(arr, positions) {
     for (var i = 0; i < positions; i++) {
         var shiftedNum = arr[0]
         arr.shift()
+        arr.push(shiftedNum);
     }
-    console.log(shiftedNum)
 };
 
 leftRotation(arr, positions);
