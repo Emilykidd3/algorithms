@@ -8,4 +8,15 @@ var arr = [-4, -1, 0, 3, 10];
 
 // should return [0, 1, 9, 16, 100];
 
-var sortedSquares = function(arr) {};
+var sortedSquares = function(arr) {
+    var newArr=[]
+    for (var i = 0; i < arr.length; i ++) {
+        var squaredNum = arr[i]*arr[i]
+        newArr.push(squaredNum);
+    }
+    newArr.sort((a,b) => a-b)
+    console.log(newArr)
+    return newArr;
+};
+
+sortedSquares(arr);
