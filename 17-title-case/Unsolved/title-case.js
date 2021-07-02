@@ -5,4 +5,18 @@
 // join arr back into string with space
 // return
 
-var titleCase = function(str) {};
+var str = "a lannister always pays his debts";
+
+var titleCase = function(str) {
+    var arr = str.split(" ");
+    var newArr = []
+    for(var i = 0; i < arr.length; i++) {
+        var firstLetter = arr[i].charAt(0).toUpperCase()
+        newArr.push(firstLetter + arr[i].slice(1))
+    }
+    var newStr = newArr.join(" ");
+    console.log(newStr);
+    return newStr;
+};
+
+titleCase(str)
