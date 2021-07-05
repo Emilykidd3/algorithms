@@ -10,6 +10,20 @@
 // if number is divisible by 5 print buzz
 // if else print number
 
+var arr = [13, 14, 15, 16, 17, 18, 19, 20];
 
+var fizzBuzz = function(arr) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i]%3 === 0 && arr[i]%5 === 0) {
+            console.log("FizzBuzz")
+        } else if (arr[i]%3 === 0) {
+            console.log("Fizz")
+        } else if (arr[i]%5 === 0) {
+            console.log("Buzz")
+        } else {
+            console.log(arr[i])
+        }
+    }
+};
 
-var fizzBuzz = function(arr) {};
+fizzBuzz(arr);
