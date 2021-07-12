@@ -7,4 +7,17 @@
 // capitolize each letter
 // return new string
 
-var acronymBuilder = function(str) {};
+var str = "For your information";
+// should return "FYI"
+
+var acronymBuilder = function(str) {
+    var arr = str.split(" ");
+    var acronym = ""
+    for (var i = 0; i < arr.length; i++) {
+        acronym += arr[i].charAt(0).toUpperCase()
+    }
+    console.log(acronym)
+    return(acronym)
+};
+
+acronymBuilder(str)
