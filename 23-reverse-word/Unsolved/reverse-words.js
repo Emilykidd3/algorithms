@@ -5,4 +5,17 @@
 // push to new arr
 // join new arr and return
 
-var reverseWords = function(str) {};
+var str = "just keep swimming";
+
+var reverseWords = function(str) {
+    var arr = str.split(" ");
+    var newArr = [];
+    for (var i = arr.length; i >= 0; i--) {
+        newArr.push(arr[i])
+    }
+    newArr = newArr.join(" ")
+    console.log(newArr)
+    return(newArr)
+};
+
+reverseWords(str)
