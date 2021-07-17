@@ -4,26 +4,18 @@ In this activity you will be writing code to create a function that takes a stri
 
 ## Instructions
 
-- Open [Unsolved/reverse-no-built-in.js](Unsolved/reverse-no-built-in.js) in your code editor -- **this is the only file you will modify in this activity.**
+- Open [Unsolved/reverse-no-built-in.js](Unsolved/
 
-  - In this file you will be writing code in the body of the `reverse` function to achieve the following:
+  - Return a new string that has all the characters in the given string in reversed order.
 
-    - Return a new string that has all the characters in the given string in reversed order.
+  - e.g. given the following string:
 
-    - e.g. given the following string:
+  ```js
+  var str = "just keep swimming";
+  ```
 
-    ```js
-    var str = "just keep swimming";
-    ```
+  - The following string should be returned:
 
-    - The following string should be returned:
-
-    ```js
-    "gnimmiws peek tsuj";
-    ```
-
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+  ```js
+  "gnimmiws peek tsuj";
+  ```
