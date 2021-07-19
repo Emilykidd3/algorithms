@@ -4,33 +4,23 @@ In this activity you will be writing code to create a function that takes an arr
 
 ## Instructions
 
-- Open [Unsolved/reverse-in-place.js](Unsolved/reverse-in-place.js) in your code editor -- **this is the only file you will modify in this activity.**
+- Reverse the array in place without using the built-in `reverse` method.
 
-  - In this file you will be writing code in the body of the `reverseInPlace` function to achieve the following:
+- To reverse an array "in place" means to reverse the original array without creating a brand new array. This can be achieved by swapping elements within the original array.
 
-    - Reverse the array in place without using the built-in `reverse` method.
+- Return the array after it has been reversed.
 
-    - To reverse an array "in place" means to reverse the original array without creating a brand new array. This can be achieved by swapping elements within the original array.
+- e.g. given the following array:
 
-    - Return the array after it has been reversed.
+```js
+var arr = [2, 4, 6, 8];
+```
 
-    - e.g. given the following array:
+- The original `arr` array should be returned, but with it's elements in reverse order.
 
-    ```js
-    var arr = [2, 4, 6, 8];
-    ```
-
-    - The original `arr` array should be returned, but with it's elements in reverse order.
-
-    ```js
-    [8, 6, 4, 2]; // this still refers to the original arr array
-    ```
-
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+```js
+[8, 6, 4, 2]; // this still refers to the original arr array
+```
 
 ### Hints
 
