@@ -10,12 +10,11 @@ var arr = [2, 4, 6, 8];
 var reverseInPlace = function(arr) {
     let i = 0
     var arr2 = [] 
-    for (i = 0; i < arr.length; i++) {
-        arr2[i] = arr[i];
+    for (j = 0; j < arr.length; j++) {
+        arr2.push(arr[j])
       }
-    while( i < arr.length) {
+    while(i < arr.length) {
         [arr[i]] = [arr2[arr.length - (i + 1)]]
-        [arr[arr.length - (i + 1)]] = [arr2[i]]
         i++
     }
     console.log(arr);
