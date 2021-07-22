@@ -4,24 +4,14 @@ In this activity you will be writing code to create a function that takes a numb
 
 ## Instructions
 
-- Open [Unsolved/look-and-say-sequence.js](Unsolved/look-and-say-sequence.js) in your code editor -- **this is the only file you will modify in this activity.**
+- Return a new number that [look-and-say-sequence](https://en.wikipedia.org/wiki/Look-and-say_sequence) for the given number.
 
-  - In this file you will be writing code in the body of the `lookAndSay` function to achieve the following:
+- The look and say sequence can be understood by reading a number out loud, digit by digit, but first saying the number of times each digit appears in a row.
 
-    - Return a new number that [look-and-say-sequence](https://en.wikipedia.org/wiki/Look-and-say_sequence) for the given number.
+- For example, given the following number:
 
-    - The look and say sequence can be understood by reading a number out loud, digit by digit, but first saying the number of times each digit appears in a row.
+```js
+var n = 5442;
+```
 
-    - For example, given the following number:
-
-    ```js
-    var n = 5442;
-    ```
-
-    - There is **one** five, **two** fours, and **one** two. So the look-say-sequence of `n` should be `152412`.
-
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+- There is **one** five, **two** fours, and **one** two. So the look-say-sequence of `n` should be `152412`.
