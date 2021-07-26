@@ -17,9 +17,7 @@ var lookAndSay = function(n) {
     for (var i = 0; i < nArr.length; i++) {
         if (nArr[i] === nArr[i+1]) {
             currentNumber += 1;
-            console.log("here")
         } else {
-            console.log("right here")
             lookAndSayNumber.push(currentNumber);
             lookAndSayNumber.push(nArr[i]);
             currentNumber = 1;
