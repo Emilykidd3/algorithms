@@ -4,42 +4,32 @@ In this activity you will be writing code to create a function that accepts a st
 
 ## Instructions
 
-* Open [Unsolved/is-numeric.js](Unsolved/is-numeric.js) in your code editor -- **this is the only file you will modify in this activity.**
+- Loop through the given string and determine if it is a valid number.
 
-  * In this file you will be writing code in the body of the `isNumeric` function to achieve the following:
+- A valid number can only contain:
 
-    * Loop through the given string and determine if it is a valid number.
+  - Numeric characters
 
-    * A valid number can only contain:
+  - A maximum of one decimal point placed anywhere in the string
 
-      * Numeric characters
+  - One `+` or `-` character at the start of the string.
 
-      * A maximum of one decimal point placed anywhere in the string
+- For example, given the following str:
 
-      * One `+` or `-` character at the start of the string.
+```js
+var str = "-0123.00";
+```
 
-    * For example, given the following str:
+- The function should return `true`
 
-    ```js
-    var str = "-0123.00";
-    ```
+- Given the following str:
 
-    * The function should return `true`
+```js
+var str = "+-a13";
+```
 
-    * Given the following str:
+- The function should return `false`
 
-    ```js
-    var str = "+-a13";
-    ```
+- Attempt to accomplish this without using any built-in methods such as `isNan`, `parseInt`, `Number`, `parseFloat`, `charChodeAt`, etc.
 
-    * The function should return `false`
-
-    * Attempt to accomplish this without using any built-in methods such as `isNan`, `parseInt`, `Number`, `parseFloat`, `charChodeAt`, etc.
-
-    * Implicit type conversion is also not allowed. I.e. using arithmetic or comparison operators on the given string such as `-`, `+`, `<`, `>`, etc.
-
-* You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  * Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+- Implicit type conversion is also not allowed. I.e. using arithmetic or comparison operators on the given string such as `-`, `+`, `<`, `>`, etc.
