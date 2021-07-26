@@ -7,6 +7,26 @@
 // if not equal add current number and number to new look and say variable
 //  return look and say number
 
-var lookAndSay = function(n) {
+var n = 5442;
+// should return 152412
 
+var lookAndSay = function(n) {
+    var currentNumber = 1
+    var lookAndSayNumber = []
+    var nArr = n.toString();
+    for (var i = 0; i < nArr.length; i++) {
+        if (nArr[i] === nArr[i+1]) {
+            currentNumber += 1;
+            console.log("here")
+        } else {
+            console.log("right here")
+            lookAndSayNumber.push(currentNumber);
+            lookAndSayNumber.push(nArr[i]);
+            currentNumber = 1;
+        }
+    }
+    console.log(lookAndSayNumber)
+    return lookAndSayNumber;
 };
+
+lookAndSay(n)
