@@ -8,4 +8,13 @@
 // if decimal variable is not 0 or 1 return false
 // return true after loop if no false is returned
 
-var isNumeric = function(str) {};
+var str = "+-a13";
+
+var isNumeric = function(str) {
+    var decimalNumber = 0;
+    for (var i = 0; i < str.length; i++) {
+        
+    }
+};
+
+isNumeric(str);
