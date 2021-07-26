@@ -25,8 +25,9 @@ var lookAndSay = function(n) {
             currentNumber = 1;
         }
     }
-    console.log(lookAndSayNumber)
-    return lookAndSayNumber;
+    var finalNumber = lookAndSayNumber.join("");
+    console.log(finalNumber)
+    return finalNumber;
 };
 
-lookAndSay(n)
+lookAndSay(n);
