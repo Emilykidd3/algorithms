@@ -13,8 +13,17 @@ var str = "+-a13";
 var isNumeric = function(str) {
     var decimalNumber = 0;
     for (var i = 0; i < str.length; i++) {
-        
+        if (str[i] !== 0 || str[i] !== 1 || str[i] !== 2 || str[i] !== 3 || str[i] !== 4 || str[i] !== 5 || str[i] !== 6 || str[i] !== 7 || str[i] !== 8 || str[i] !== 9) {
+            console.log("false");
+            return false;
+        }
+        if (str[i+1] === "-" || str[i+1] === "+"){
+            console.log("false");
+            return false;
+        }
     }
+    console.log("true")
+    return true
 };
 
 isNumeric(str);
