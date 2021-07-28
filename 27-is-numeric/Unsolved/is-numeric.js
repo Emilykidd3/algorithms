@@ -8,12 +8,13 @@
 // if decimal variable is not 0 or 1 return false
 // return true after loop if no false is returned
 
-var str = "+-a13";
+var str = "13";
 
 var isNumeric = function(str) {
     var decimalNumber = 0;
     for (var i = 0; i < str.length; i++) {
-        if (str[i] !== 0 || str[i] !== 1 || str[i] !== 2 || str[i] !== 3 || str[i] !== 4 || str[i] !== 5 || str[i] !== 6 || str[i] !== 7 || str[i] !== 8 || str[i] !== 9) {
+        console.log(str[i])
+        if (str[i] != 0 && str[i] != 1 && str[i] != 2 && str[i] != 3 && str[i] != 4 && str[i] != 5 && str[i] != 6 && str[i] != 7 && str[i] != 8 && str[i] != 9 && str[i] != "-" && str[i] != "+") {
             console.log("false");
             return false;
         }
