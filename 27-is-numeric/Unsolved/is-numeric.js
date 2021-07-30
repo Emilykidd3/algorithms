@@ -24,7 +24,10 @@ var isNumeric = function(str) {
         }
         if (str[i] === ".") {
             decimalNumber += 1;
-            console.log(decimalNumber);
+        }
+        if (decimalNumber != 0 && decimalNumber != 1) {
+            console.log("false")
+            return false;
         }
     }
     console.log("true")
