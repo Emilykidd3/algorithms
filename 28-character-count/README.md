@@ -4,10 +4,6 @@ In this activity you will be writing code to create a function that takes a stri
 
 ## Instructions
 
-- Open [Unsolved/character-count.js](Unsolved/character-count.js) in your code editor -- **this is the only file you will modify in this activity.**
-
-  - In this file you will be writing code in the body of the `characterCount` function to achieve the following:
-
     - Create a new object.
 
     - Loop through each character in the given string and create a new key for each character in the string.
@@ -25,12 +21,6 @@ In this activity you will be writing code to create a function that takes a stri
     ```js
     { H: 1, e: 1, l: 3, o: 2, ' ': 1, W: 1, r: 1, d: 1, '!': 1 }
     ```
-
-- You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  - Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  - Functions that _fail_ the tests will be denoted with a **red x and an error message**.
 
 ### Hints
 
