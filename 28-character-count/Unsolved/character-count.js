@@ -6,4 +6,14 @@
 // if letter/ value is already there, add one to value
 // return charCount object
 
-var characterCount = function(str) {};
+var str = "Hello World!";
+// should return { H: 1, e: 1, l: 3, o: 2, ' ': 1, W: 1, r: 1, d: 1, '!': 1 }
+
+var characterCount = function(str) {
+    var charCount = {};
+    for (var i = 0; i < str.length; i++ ) {
+        
+    }
+};
+
+characterCount(str)
