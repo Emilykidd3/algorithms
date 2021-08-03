@@ -12,8 +12,20 @@ var str = "Hello World!";
 var characterCount = function(str) {
     var charCount = {};
     for (var i = 0; i < str.length; i++ ) {
-        
+        var keys = Object.keys(charCount);
+        for (var j = 0; j < keys.length; j ++) {
+            console.log("here")
+            // if key is already in object, add 1 to value
+            // else create new key value pair with key of the letter and value of 1
+            if (str[i] === keys[j]) {
+                obj[str[i]] += 1;
+            } else {
+                obj[str[i]] = 1;
+            }
+        }
     }
+    console.log(charCount);
+    return(charCount)
 };
 
 characterCount(str)
