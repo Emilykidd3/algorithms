@@ -13,17 +13,10 @@ var characterCount = function(str) {
     var charCount = {};
     charCount[str[0]] = 1;
     for (var i = 1; i < str.length; i++ ) {
-        var keys = Object.keys(charCount);
-        for (var j = 0; j < keys.length; j ++) {
-            // if key is already in object, add 1 to value
-            // else create new key value pair with key of the letter and value of 1
-            if (str[i] === keys[j]) {
-                charCount[str[i]] = charCount[str[i]] + 1;
-                console.log("add one")
-                console.log(charCount[str[i]])
-            } else {
-                charCount[str[i]] = 1;
-            }
+        if (str[i] in charCount) {
+            charCount[str[i]]++;
+        } else {
+            charCount[str[i]] = 1;
         }
     }
     console.log(charCount);
