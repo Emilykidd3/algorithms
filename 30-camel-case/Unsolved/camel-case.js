@@ -7,4 +7,20 @@
 // add word to new string
 // return new string
 
-var camelCase = function(str) {};
+var str = "let the force flow through you";
+// should return "letTheForceFlowThroughYou";
+
+var camelCase = function(str) {
+    var arr = str.split(" ");
+    var newStr = arr[0];
+    for (var i = 1; i < arr.length; i++) {
+        newStr += arr[i].charAt(0).toUpperCase();
+        for (var j = 1; j < arr[i].length; j++) {
+            newStr += arr[i][j]
+        }
+    }
+    console.log(newStr);
+    return newStr;
+};
+
+camelCase(str);
