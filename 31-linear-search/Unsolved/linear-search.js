@@ -3,4 +3,9 @@
 // else return -1
 // You may not use the `indexOf`, `lastIndexOf` or `includes` methods
 
+// loop through arr
+// if arr[i] === targer
+// return i
+// else return -1
+
 var linearSearch = function(arr, target) {};
