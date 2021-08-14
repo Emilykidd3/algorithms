@@ -8,4 +8,19 @@
 // return i
 // else return -1
 
-var linearSearch = function(arr, target) {};
+var arr = [82, 22, -4, 21, 1, 8];
+var target = 8;
+// should return 5
+
+var linearSearch = function(arr, target) {
+    for (var i = 0; i < arr.length; i++) {
+        if (arr[i] === target) {
+            console.log(i);
+            return i;
+        } 
+    }
+    console.log(-1);
+    return -1
+};
+
+linearSearch(arr, target);
