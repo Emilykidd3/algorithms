@@ -8,4 +8,22 @@
 // loop through object and if any key is > 1 return false 
 // return true
 
-var isUnique = function(arr) {};
+var arr = [3, 4, 5, 7, 9]; // no number is repeated
+// return true
+
+var isUnique = function(arr) {
+    var numberCount = {};
+    numberCount[arr[0]] = 1;
+    for (var i = 1; i < arr.length; i++) {
+        if (arr[i] in numberCount) {
+            console.log("false")
+            return false;
+        } else {
+            numberCount[arr[i]] = 1;
+        }
+    }
+    console.log("true")
+    return true;
+};
+
+isUnique(arr);
