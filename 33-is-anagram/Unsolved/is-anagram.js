@@ -12,10 +12,12 @@ var strB = "njdnsjyu";
 // should return true;
 
 var isAnagram = function(strA, strB) {
+    var alpA = alphabetize(strA);
+    var alpB = alphabetize(strB)
     if (strA.length != strB.length) {
         console.log("false");
         return false;
-    } else if (strA.split("").reverse().join("") != strB) {
+    } else if (alpA != alpB) {
         // redo to see if letters are the same
         console.log("false")
         return false;
@@ -23,7 +25,10 @@ var isAnagram = function(strA, strB) {
         console.log("true");
         return true;
     }
-   
 };
+
+var alphabetize = function (str) {
+    // function that alphabetizes str
+}
 
 isAnagram(strA, strB);
