@@ -28,7 +28,9 @@ var isAnagram = function(strA, strB) {
 };
 
 var alphabetize = function (str) {
-    // function that alphabetizes str
+    var arr = str.split("");
+    var newStr = arr.sort().join()
+    return newStr;
 }
 
 isAnagram(strA, strB);
