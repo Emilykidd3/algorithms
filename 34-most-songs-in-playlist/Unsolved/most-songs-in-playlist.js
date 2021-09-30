@@ -10,5 +10,13 @@
 // if time is less than 60 minutes plus next song time, add next song and add one to number of songs variable
 // else return time length variable.
 
+var arr = [4, 2, 5, 3, 1, 1, 2, 3, 4, 2, 5, 6, 3, 2, 4, 7, 3, 2, 3];
+
 var noMoreThanPrevious = function (arr) {
+  var newArr = arr.sort((a, b) => {
+    return a - b;
+  })
+  console.log(newArr)
 };
+
+noMoreThanPrevious(arr);
