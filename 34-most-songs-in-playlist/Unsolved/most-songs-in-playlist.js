@@ -13,10 +13,13 @@
 var arr = [4, 2, 5, 3, 1, 1, 2, 3, 4, 2, 5, 6, 3, 2, 4, 7, 3, 2, 3];
 
 var noMoreThanPrevious = function (arr) {
+  var numberOfSongs = 0;
+  var playlistLength = 0;
   var newArr = arr.sort((a, b) => {
     return a - b;
   })
-  console.log(newArr)
+  playlistLength += arr[0];
+  console.log(playlistLength)
 };
 
 noMoreThanPrevious(arr);
