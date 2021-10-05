@@ -1,48 +1,39 @@
 # Is Perfect Square
 
-In this activity you will be writing code to create a function that takes in a whole number, and returns `true` if the number is a [perfect square](https://en.wikipedia.org/wiki/Square_number), otherwise returns `false`.
+write a code to create a function that takes in a whole number, and returns `true` if the number is a [perfect square](https://en.wikipedia.org/wiki/Square_number), otherwise returns `false`.
 
 ## Instructions
 
-* Open [Unsolved/is-perfect-square.js](Unsolved/is-perfect-square.js) in your code editor -- **this is the only file you will modify in this activity.**
+  * If `num` is a [perfect square](https://en.wikipedia.org/wiki/Square_number), return `true`. Else return `false`.
 
-  * In this file you will be writing code in the body of the `isPerfectSquare` function to achieve the following:
+    * A perfect square is a number that has a whole number as a square root.
 
-    * If `num` is a [perfect square](https://en.wikipedia.org/wiki/Square_number), return `true`. Else return `false`.
+  * For example, given the following number:
 
-      * A perfect square is a number that has a whole number as a square root.
+  ```js
+  var num = 36; // Square root of 36 is 6
+  ```
 
-    * For example, given the following number:
+  * The following number should be returned:
 
-    ```js
-    var num = 36; // Square root of 36 is 6
-    ```
+  ```js
+  true
+  ```
 
-    * The following number should be returned:
+  * Given the following number:
 
-    ```js
-    true
-    ```
+  ```js
+  var num = 50; // Square root of 50 is 7.07106781187
+  ```
 
-    * Given the following number:
+  * The following number should be returned:
 
-    ```js
-    var num = 50; // Square root of 50 is 7.07106781187
-    ```
+  ```js
+  false
+  ```
 
-    * The following number should be returned:
+  * **Complete this problem without the use of the built-in `Math.sqrt` method.**
 
-    ```js
-    false
-    ```
-
-    * **Complete this problem without the use of the built-in `Math.sqrt` method.**
-
-* You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  * Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
 
 ### Hints
 
