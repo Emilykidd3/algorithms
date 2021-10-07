@@ -6,4 +6,14 @@
 // add to a variable 
 // if variable is equal to the original number return true
 
-var isArmstrong = function (num) { };
+var num = 153
+
+var isArmstrong = function (num) {
+    var newNum = 0;
+    var arr = String(num).split("");
+    for (var i = 0; i > arr.length; i++) {
+
+    }
+};
+
+isArmstrong(num);
