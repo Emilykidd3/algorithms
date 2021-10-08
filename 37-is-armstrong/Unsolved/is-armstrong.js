@@ -6,18 +6,24 @@
 // add to a variable 
 // if variable is equal to the original number return true
 
-var num = 153
+var num = 153;
 
 var isArmstrong = function (num) {
     var newNum = 0;
     var arr = String(num).split("").map((num) => {
         return Number(num)
     })
-    console.log(arr)
     for (var i = 0; i < arr.length; i++) {
-        var numToAdd = (arr[i] ** arr[i])
+        var numToAdd = (arr[i] ** arr.length)
+        newNum += numToAdd;
     }
-    console.log(numToAdd);
+    if (newNum === num) {
+        console.log("true");
+        return true;
+    } else {
+        console.log("false");
+        return false;
+    }
 };
 
 isArmstrong(num);
