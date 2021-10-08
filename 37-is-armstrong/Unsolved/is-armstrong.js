@@ -10,10 +10,14 @@ var num = 153
 
 var isArmstrong = function (num) {
     var newNum = 0;
-    var arr = String(num).split("");
-    for (var i = 0; i > arr.length; i++) {
-
+    var arr = String(num).split("").map((num) => {
+        return Number(num)
+    })
+    console.log(arr)
+    for (var i = 0; i < arr.length; i++) {
+        var numToAdd = (arr[i] ** arr[i])
     }
+    console.log(numToAdd);
 };
 
 isArmstrong(num);
