@@ -8,4 +8,13 @@
 // if number is greater than max profit var, repace it
 // at end return max profit var
 
-var maxProfit = function (prices) { };
+var arr = [1, 6, 7, 9];
+
+var maxProfit = function (arr) {
+    var greatestProfit = 0;
+    for (var i = 0; i < arr.length; i++) {
+        console.log(arr[i]);
+    }
+};
+
+maxProfit(arr);
