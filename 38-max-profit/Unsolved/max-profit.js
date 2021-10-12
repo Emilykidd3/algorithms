@@ -13,8 +13,14 @@ var arr = [1, 6, 7, 9];
 var maxProfit = function (arr) {
     var greatestProfit = 0;
     for (var i = 0; i < arr.length; i++) {
-        console.log(arr[i]);
+        for (var j = i; j < arr.length; j++) {
+            if (arr[j] - arr[i] > greatestProfit) {
+                greatestProfit = arr[j] - arr[i];
+            }
+        }
     }
+    console.log(greatestProfit);
+    return greatestProfit;
 };
 
 maxProfit(arr);
