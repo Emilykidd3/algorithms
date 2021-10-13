@@ -1,52 +1,43 @@
 # Smallest Difference
 
-In this activity you will be writing code to create a function that takes in two sorted arrays of integers. Your function should return a new two element array containing one number from each sorted array with the smallest difference.
+Write a code to create a function that takes in two sorted arrays of integers. Your function should return a new two element array containing one number from each sorted array with the smallest difference.
 
 ## Instructions
 
-* Open [Unsolved/smallest-difference.js](Unsolved/smallest-difference.js) in your code editor -- **this is the only file you will modify in this activity.**
+  * Return a two element array containing the integers from both arrays with the smallest distance.
 
-  * In this file you will be writing code in the body of the `smallestDifference` function to achieve the following:
+  * For example, given the following arrays:
 
-    * Return a two element array containing the integers from both arrays with the smallest distance.
+  ```js
+  var arr1 = [1, 6, 7, 9];
+  var arr1 = [8, 9, 10, 11, 12, 13];
+  ```
 
-    * For example, given the following arrays:
+  * The following should be returned:
 
-    ```js
-    var arr1 = [1, 6, 7, 9];
-    var arr1 = [8, 9, 10, 11, 12, 13];
-    ```
+  ```js
+  [9, 9];
+  ```
 
-    * The following should be returned:
+  * Since both arrays contain the number `9` and the difference between same numbers is `0`.
 
-    ```js
-    [9, 9];
-    ```
+  * Given the following arrays:
 
-    * Since both arrays contain the number `9` and the difference between same numbers is `0`.
+  ```js
+  var arr1 = [2, 4, 6, 8, 15, 20];
+  var arr2 = [17, 25, 30, 47];
+  ```
 
-    * Given the following arrays:
+  * The following should be returned:
 
-    ```js
-    var arr1 = [2, 4, 6, 8, 15, 20];
-    var arr2 = [17, 25, 30, 47];
-    ```
+  ```js
+  [15, 17];
+  ```
 
-    * The following should be returned:
+  * Since the difference between `15` and `17` is `2`, the smallest difference between any two numbers across the arrays
 
-    ```js
-    [15, 17];
-    ```
+  * Assume each array will contain at least one integer.
 
-    * Since the difference between `15` and `17` is `2`, the smallest difference between any two numbers across the arrays
-
-    * Assume each array will contain at least one integer.
-
-* You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
-
-  * Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
 
 ### Hints
 
