@@ -9,18 +9,23 @@
 // if it is smaller than the var, replace var and use i and j as the new arr to return
 // return arr
 
-var arr1 = [1, 6, 7, 9];
-var arr2 = [8, 9, 10, 11, 12, 13];
+var arr1 = [2, 4, 6, 8, 15, 20];
+var arr2 = [17, 25, 30, 47];
 
 var smallestDifference = function (arr1, arr2) {
     var arrToReturn = [];
     var smallestDiff = Math.abs(arr1[0] - arr2[0]);
     for (var i = 0; i < arr1.length; i++) {
         for (var j = 0; j < arr2.length; j++) {
-            console.log(arr1[i])
-            console.log(arr2[j])
+            var toCompare = Math.abs(arr1[i] - arr2[j]);
+            if (smallestDiff > toCompare) {
+                smallestDiff = toCompare;
+                arrToReturn = [arr1[i], arr2[j]];
+            }
         }
     }
+    console.log(arrToReturn)
+    return arrToReturn;
 };
 
 smallestDifference(arr1, arr2)
