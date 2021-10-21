@@ -7,4 +7,13 @@
 // if end time is before next start time go to next in loop
 // after loop return arr
 
-var mergeMeetingTimes = function (arr) { };
+var arr = [[1, 3], [2, 4]];
+
+var mergeMeetingTimes = function (arr) {
+    var newArr = arr.sort((a, b) => {
+        return a[0] - b[0];
+    })
+    console.log(newArr);
+};
+
+mergeMeetingTimes(arr)
