@@ -7,7 +7,7 @@
 // if end time is before next start time go to next in loop
 // after loop return arr
 
-var arr = [[1, 3], [2, 4]];
+var arr = [[5, 8], [1, 4], [6, 8]];
 
 var mergeMeetingTimes = function (arr) {
     var newArr = arr.sort((a, b) => {
@@ -15,8 +15,8 @@ var mergeMeetingTimes = function (arr) {
     })
     for (var i = 0; i < newArr.length - 1; i++) {
         if (newArr[i][1] > newArr[i + 1][0]) {
-            console.log("here")
             newArr[i][1] = newArr[i + 1][1];
+            newArr.splice(i + 1, 1);
         }
     }
     console.log(newArr);
