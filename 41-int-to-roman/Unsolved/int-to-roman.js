@@ -30,4 +30,10 @@
 
 var num = 2024;
 
-var intToRoman = function (num) { };
+var intToRoman = function (num) {
+    var str = num.toString();
+    var arr = str.split("");
+    console.log(arr)
+};
+
+intToRoman(num)
