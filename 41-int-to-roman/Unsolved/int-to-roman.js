@@ -33,7 +33,9 @@ var num = 2024;
 var intToRoman = function (num) {
     var str = num.toString();
     var arr = str.split("");
-    console.log(arr)
+    for (var i = arr.length - 1; i >= 0; i--) {
+        console.log(arr[i])
+    }
 };
 
 intToRoman(num)
