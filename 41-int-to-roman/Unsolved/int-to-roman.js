@@ -28,14 +28,21 @@
 // add letter to var
 // console.log/return var 
 
-var num = 2024;
+var num = 3;
 
 var intToRoman = function (num) {
     var str = num.toString();
+    var romanNumberal = ""
     var arr = str.split("");
     for (var i = arr.length - 1; i >= 0; i--) {
-        console.log(arr[i])
+        if (arr[i] ===
+            "1" || arr[i] === "2" || arr[i] === "3") {
+            for (var j = 0; j < parseInt(arr[i]); j++) {
+                romanNumberal += "I"
+            }
+        }
     }
+    console.log(romanNumberal)
 };
 
 intToRoman(num)
