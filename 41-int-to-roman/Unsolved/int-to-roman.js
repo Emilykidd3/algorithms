@@ -28,7 +28,7 @@
 // add letter to var
 // console.log/return var 
 
-var num = 3;
+var num = 6;
 
 var intToRoman = function (num) {
     var str = num.toString();
@@ -40,6 +40,15 @@ var intToRoman = function (num) {
             for (var j = 0; j < parseInt(arr[i]); j++) {
                 romanNumberal += "I"
             }
+        }
+        if (arr[i] === "4") {
+            romanNumberal += "IV"
+        }
+        if (arr[i] === "5") {
+            romanNumberal += "V"
+        }
+        if (arr[i] === "6") {
+            romanNumberal += "VI"
         }
     }
     console.log(romanNumberal)
