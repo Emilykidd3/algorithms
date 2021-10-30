@@ -50,6 +50,15 @@ var intToRoman = function (num) {
         if (arr[i] === "6") {
             romanNumberal += "VI"
         }
+        if (arr[i] === "7") {
+            romanNumberal += "VII"
+        }
+        if (arr[i] === "8") {
+            romanNumberal += "VIII"
+        }
+        if (arr[i] === "9") {
+            romanNumberal += "IX"
+        }
     }
     console.log(romanNumberal)
 };
