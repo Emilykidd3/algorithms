@@ -28,13 +28,12 @@
 // add letter to var
 // console.log/return var 
 
-var num = 86;
+var num = 77;
 
 var intToRoman = function (num) {
     var str = num.toString();
     var romanNumeralFinal = ""
     var arr = str.split("");
-    console.log(arr)
     if (arr.length === 1) {
         oneDigit(arr[0]);
         romanNumeralFinal += romanNumeral
@@ -90,6 +89,29 @@ var twoDigits = function (num) {
     }
     if (num === "9") {
         romanNumeral += "XC"
+    }
+    return romanNumeral;
+}
+
+var threeDigits = function (num) {
+    romanNumeral = "";
+    if (num ===
+        "1" || num === "2" || num === "3") {
+        for (var j = 0; j < parseInt(num); j++) {
+            romanNumeral += "C"
+        }
+    }
+    if (num === "4") {
+        romanNumeral += "CD"
+    }
+    if (num === "5" || num === "6" || num === "7" || num === "8") {
+        romanNumeral += "D"
+        for (var j = 0; j < parseInt(num - 5); j++) {
+            romanNumeral += "C"
+        }
+    }
+    if (num === "9") {
+        romanNumeral += "CM"
     }
     return romanNumeral;
 }
