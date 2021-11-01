@@ -38,6 +38,9 @@ var intToRoman = function (num) {
         oneDigit(arr[0]);
         romanNumeralFinal += romanNumeral
     }
+    if (arr.length === 2) {
+
+    }
     console.log(romanNumeralFinal)
 };
 
@@ -60,6 +63,29 @@ var oneDigit = function (num) {
     }
     if (num === "9") {
         romanNumeral += "IX"
+    }
+    return romanNumeral;
+}
+
+var twoDigits = function (num) {
+    romanNumeral = "";
+    if (num ===
+        "1" || num === "2" || num === "3") {
+        for (var j = 0; j < parseInt(num); j++) {
+            romanNumeral += "X"
+        }
+    }
+    if (num === "4") {
+        romanNumeral += "XL"
+    }
+    if (num === "5" || num === "6" || num === "7" || num === "8") {
+        romanNumeral += "L"
+        for (var j = 0; j < parseInt(num - 5); j++) {
+            romanNumeral += "X"
+        }
+    }
+    if (num === "9") {
+        romanNumeral += "XC"
     }
     return romanNumeral;
 }
