@@ -28,33 +28,40 @@
 // add letter to var
 // console.log/return var 
 
-var num = 5;
+var num = 9;
 
 var intToRoman = function (num) {
     var str = num.toString();
-    var romanNumberal = ""
+    var romanNumeralFinal = ""
     var arr = str.split("");
-    for (var i = arr.length - 1; i >= 0; i--) {
-        if (arr[i] ===
-            "1" || arr[i] === "2" || arr[i] === "3") {
-            for (var j = 0; j < parseInt(arr[i]); j++) {
-                romanNumberal += "I"
-            }
-        }
-        if (arr[i] === "4") {
-            romanNumberal += "IV"
-        }
-        if (arr[i] === "5" || arr[i] === "6" || arr[i] === "7" || arr[i] === "8") {
-            romanNumberal += "V"
-            for (var j = 0; j < parseInt(arr[i] - 5); j++) {
-                romanNumberal += "I"
-            }
-        }
-        if (arr[i] === "9") {
-            romanNumberal += "IX"
-        }
+    if (arr.length === 1) {
+        oneDigit(arr[0]);
+        romanNumeralFinal += romanNumeral
     }
-    console.log(romanNumberal)
+    console.log(romanNumeralFinal)
 };
 
-intToRoman(num)
+var oneDigit = function (num) {
+    romanNumeral = "";
+    if (num ===
+        "1" || num === "2" || num === "3") {
+        for (var j = 0; j < parseInt(num); j++) {
+            romanNumeral += "I"
+        }
+    }
+    if (num === "4") {
+        romanNumeral += "IV"
+    }
+    if (num === "5" || num === "6" || num === "7" || num === "8") {
+        romanNumeral += "V"
+        for (var j = 0; j < parseInt(num - 5); j++) {
+            romanNumeral += "I"
+        }
+    }
+    if (num === "9") {
+        romanNumeral += "IX"
+    }
+    return romanNumeral;
+}
+
+intToRoman(num);
