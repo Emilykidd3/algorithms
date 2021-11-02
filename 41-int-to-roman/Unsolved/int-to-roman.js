@@ -28,7 +28,7 @@
 // add letter to var
 // console.log/return var 
 
-var num = 77;
+var num = 123;
 
 var intToRoman = function (num) {
     var str = num.toString();
@@ -42,6 +42,14 @@ var intToRoman = function (num) {
         twoDigits(arr[0]);
         romanNumeralFinal += romanNumeral;
         oneDigit(arr[1]);
+        romanNumeralFinal += romanNumeral;
+    }
+    if (arr.length === 3) {
+        threeDigits(arr[0]);
+        romanNumeralFinal += romanNumeral;
+        twoDigits(arr[1]);
+        romanNumeralFinal += romanNumeral;
+        oneDigit(arr[2])
         romanNumeralFinal += romanNumeral;
     }
     console.log(romanNumeralFinal)
