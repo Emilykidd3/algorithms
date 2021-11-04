@@ -28,7 +28,7 @@
 // add letter to var
 // console.log/return var 
 
-var num = 123;
+var num = 1123;
 
 var intToRoman = function (num) {
     var str = num.toString();
@@ -50,6 +50,16 @@ var intToRoman = function (num) {
         twoDigits(arr[1]);
         romanNumeralFinal += romanNumeral;
         oneDigit(arr[2])
+        romanNumeralFinal += romanNumeral;
+    }
+    if (arr.length === 4) {
+        fourDigits(arr[0]);
+        romanNumeralFinal += romanNumeral;
+        threeDigits(arr[1]);
+        romanNumeralFinal += romanNumeral;
+        twoDigits(arr[2]);
+        romanNumeralFinal += romanNumeral;
+        oneDigit(arr[3])
         romanNumeralFinal += romanNumeral;
     }
     console.log(romanNumeralFinal)
@@ -120,6 +130,17 @@ var threeDigits = function (num) {
     }
     if (num === "9") {
         romanNumeral += "CM"
+    }
+    return romanNumeral;
+}
+
+var fourDigits = function (num) {
+    romanNumeral = "";
+    if (num ===
+        "1" || num === "2" || num === "3") {
+        for (var j = 0; j < parseInt(num); j++) {
+            romanNumeral += "M"
+        }
     }
     return romanNumeral;
 }
