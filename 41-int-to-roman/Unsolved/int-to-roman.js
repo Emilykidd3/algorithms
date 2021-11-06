@@ -28,7 +28,7 @@
 // add letter to var
 // console.log/return var 
 
-var num = 1123;
+var num = 42;
 
 var intToRoman = function (num) {
     var str = num.toString();
@@ -67,8 +67,7 @@ var intToRoman = function (num) {
 
 var oneDigit = function (num) {
     romanNumeral = "";
-    if (num ===
-        "1" || num === "2" || num === "3") {
+    if (num === "1" || num === "2" || num === "3") {
         for (var j = 0; j < parseInt(num); j++) {
             romanNumeral += "I"
         }
@@ -90,8 +89,7 @@ var oneDigit = function (num) {
 
 var twoDigits = function (num) {
     romanNumeral = "";
-    if (num ===
-        "1" || num === "2" || num === "3") {
+    if (num === "1" || num === "2" || num === "3") {
         for (var j = 0; j < parseInt(num); j++) {
             romanNumeral += "X"
         }
@@ -113,8 +111,7 @@ var twoDigits = function (num) {
 
 var threeDigits = function (num) {
     romanNumeral = "";
-    if (num ===
-        "1" || num === "2" || num === "3") {
+    if (num === "1" || num === "2" || num === "3") {
         for (var j = 0; j < parseInt(num); j++) {
             romanNumeral += "C"
         }
@@ -136,8 +133,7 @@ var threeDigits = function (num) {
 
 var fourDigits = function (num) {
     romanNumeral = "";
-    if (num ===
-        "1" || num === "2" || num === "3") {
+    if (num === "1" || num === "2" || num === "3") {
         for (var j = 0; j < parseInt(num); j++) {
             romanNumeral += "M"
         }
