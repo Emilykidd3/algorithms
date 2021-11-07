@@ -28,7 +28,7 @@
 // add letter to var
 // console.log/return var 
 
-var num = 42;
+var num = 2999;
 
 var intToRoman = function (num) {
     var str = num.toString();
