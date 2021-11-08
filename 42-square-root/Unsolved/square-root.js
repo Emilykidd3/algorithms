@@ -6,4 +6,15 @@
 // if loop squared is less than x keep looping
 // if loop squared is greater than x return i-1
 
-var sqrt = function (x) { };
+var num = 25;
+
+var sqrt = function (num) {
+    for (var i = 1; i < num; i++) {
+        if (num < i * i) {
+            console.log(i - 1);
+            return;
+        }
+    }
+};
+
+sqrt(num);
