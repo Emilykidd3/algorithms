@@ -1,45 +1,35 @@
 # Square Root
 
-In this activity you will be writing code to create a function that takes a positive integer and returns its square root.
+Write a code to create a function that takes a positive integer and returns its square root.
 
 ## Instructions
 
-* Open [Unsolved/square-root.js](Unsolved/square-root.js) in your code editor -- **this is the only file you will modify in this activity.**
+  * Return the square root of the passed in integer. If the square root is a decimal number, round it down to a whole integer before returning it.
 
-  * In this file you will be writing code in the body of the `sqrt` function to achieve the following:
+  * For example, given the following number:
 
-    * Return the square root of the passed in integer. If the square root is a decimal number, round it down to a whole integer before returning it.
+  ```js
+  var num = 25;
+  ```
 
-    * For example, given the following number:
+  * The following number should be returned:
 
-    ```js
-    var num = 25;
-    ```
+  ```js
+  5;
+  ```
 
-    * The following number should be returned:
-
-    ```js
-    5;
-    ```
-
-    * Given the following number:
-
-     ```js
-    var num = 6;
-    ```
-
-    * The following number should be returned:
+  * Given the following number:
 
     ```js
-    2;
-    ```
+  var num = 6;
+  ```
 
-    * Since the square root of `6` is ≈`2.45`, we round it down to `2`.
+  * The following number should be returned:
 
-    * You may not use the built-in `Math.sqrt` method.
+  ```js
+  2;
+  ```
 
-* You can check to see if your function works properly by opening [Unsolved/test.html](Unsolved/test.html) in your web browser.
+  * Since the square root of `6` is ≈`2.45`, we round it down to `2`.
 
-  * Functions that _pass_ the tests will be denoted with a **green check mark**.
-
-  * Functions that _fail_ the tests will be denoted with a **red x and an error message**.
+  * You may not use the built-in `Math.sqrt` method.
