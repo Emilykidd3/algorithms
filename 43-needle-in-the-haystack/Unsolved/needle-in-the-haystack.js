@@ -13,12 +13,17 @@
 // check if first letter is in arr1 1st?
 
 var str1 = "JavaScript";
-var str2 = "";
+var str2 = "Scr";
 
 var strStr = function(str1, str2) {
     if (str2 === "") {
         console.log(0)
         return 0;
+    }
+    for (var i = 0; i < str1.length; i++){
+        if (str1[i] === str2[0]){
+            console.log("here")
+        }
     }
 };
 
