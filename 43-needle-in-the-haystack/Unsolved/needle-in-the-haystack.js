@@ -26,11 +26,10 @@ var strStr = function(str1, str2) {
                 if (str1[i + j] !== str2[j]) {
                     console.log(-1)
                     return -1
-                } else {
-                    console.log(i);
-                    return i;
                 }
             }
+            console.log(i);
+            return i;
         }
     }
 };
