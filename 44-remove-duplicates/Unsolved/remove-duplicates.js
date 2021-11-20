@@ -8,6 +8,18 @@
 // console.log arr
 
 // how to remove something from an arr
-// arr.splice(i+1, 0)
+// arr.splice(i+1, 1)
 
-var removeDuplicates = function(nums) {};
+var arr = [1, 1, 2, 3, 4, 4, 9, 9];
+// should print [1, 2, 3, 4, 9];
+
+var removeDuplicates = function(arr) {
+    for (var i=0; i < arr.length; i++){
+        if(arr[i] === arr[i+1]){
+            arr.splice(i+1, 1);
+        }
+    }
+    console.log(arr);
+};
+
+removeDuplicates(arr)
