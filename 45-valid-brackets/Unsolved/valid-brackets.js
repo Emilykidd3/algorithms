@@ -10,7 +10,7 @@
 // remove arr[i] and arr[i+1] from arr
 // else if return false
 
-var str = "{ } [ ( [] ) ]";
+var str = "{ } [ ( [] ) ] ]";
 
 var validBrackets = function(str) {
     var arr = str.split("");
@@ -19,7 +19,12 @@ var validBrackets = function(str) {
             arr.splice(i, 1);
         }
     }
-    removeClosedPair(arr);
+    if (arr.length%2 === 1) {
+        console.log("false")
+        return false;
+    } else {
+        removeClosedPair(arr);
+    }
 };
 
 var removeClosedPair= function(arr){
