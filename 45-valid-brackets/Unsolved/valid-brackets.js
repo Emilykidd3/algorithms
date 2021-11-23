@@ -10,7 +10,7 @@
 // remove arr[i] and arr[i+1] from arr
 // else if return false
 
-var str = "{ } [ ( [] ) ] ]";
+var str = "{ } [ ( [] ) ] () ([])";
 
 var validBrackets = function(str) {
     var arr = str.split("");
@@ -23,8 +23,16 @@ var validBrackets = function(str) {
         console.log("false")
         return false;
     } else {
-        removeClosedPair(arr);
+        for (var i = 0; i < arr.length+1; i++){
+            removeClosedPair(arr);
+        }
+        if (arr.length > 0) {
+            console.log(false);
+            return false;
+        }
     }
+    console.log("true");
+    return true;
 };
 
 var removeClosedPair= function(arr){
@@ -33,7 +41,6 @@ var removeClosedPair= function(arr){
             arr.splice(i, 2);
         }
     }
-    console.log(arr);
 }
 
 validBrackets(str);
