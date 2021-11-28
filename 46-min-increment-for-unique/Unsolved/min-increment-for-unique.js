@@ -10,10 +10,15 @@
 // return variable 
 
 var arr = [1, 2, 2];
+var amountIncremented = 0;
 
 var minIncrement = function(arr) {
-    var amountIncremented = 0;
     arr.sort((a,b) => a-b);
+    var isDuplicate = checkDuplicate(arr);
+    return(isDuplicate);
+};
+
+var incrementDuplicates = function(arr){
     for (var i = 0; i < arr.length; i++){
         if (arr[i] === arr[i+1]){
             arr[i+1]++;
@@ -22,6 +27,17 @@ var minIncrement = function(arr) {
     }
     console.log(amountIncremented);
     console.log(arr);
-};
+}
+
+var checkDuplicate = function(arr) {
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] === arr[i+1]){
+            console.log("false")
+            return false;
+        }
+    }
+    console.log("true");
+    return true;
+}
 
 minIncrement(arr);
