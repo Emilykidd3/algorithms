@@ -9,4 +9,15 @@
 // add 1 to arr[i+1] and add 1 to variable
 // return variable 
 
-var minIncrement = function(nums) {};
+var arr = [1, 2, 2];
+
+var minIncrement = function(arr) {
+    arr.sort((a,b) => a-b);
+    for (var i = 0; i < arr.length; i++){
+        if (arr[i] === arr[i+1]){
+            console.log("here")
+        }
+    }
+};
+
+minIncrement(arr);
