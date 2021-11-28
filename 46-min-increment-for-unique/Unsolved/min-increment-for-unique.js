@@ -12,12 +12,16 @@
 var arr = [1, 2, 2];
 
 var minIncrement = function(arr) {
+    var amountIncremented = 0;
     arr.sort((a,b) => a-b);
     for (var i = 0; i < arr.length; i++){
         if (arr[i] === arr[i+1]){
-            console.log("here")
+            arr[i+1]++;
+            amountIncremented++;
         }
     }
+    console.log(amountIncremented);
+    console.log(arr);
 };
 
 minIncrement(arr);
