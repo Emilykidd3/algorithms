@@ -4,4 +4,13 @@
 // sort arr from smallest to largest
 // return last number 
 
-var peakFinder = function(nums) {};
+var arr = [2, 4, 6, 8, 10];
+
+var peakFinder = function(arr) {
+    arr.sort((a, b) => {
+        return a - b;
+    })
+    console.log(arr[arr.length-1]);
+};
+
+peakFinder(arr);
