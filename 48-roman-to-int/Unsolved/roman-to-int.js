@@ -32,6 +32,21 @@
 // if there is an I after the V, add 1
 // if there is an I add 1
 
-// var str = "MMXXIV";
+var str = "VIIII";
 
-var romanToInt = function(str) {};
+var romanToInt = function(str) {
+    var num = 0;
+    for (var i = 0; i < str.length; i++) {
+        if (str[i] === "I" && str[i+1] ==="V"){
+            num--;
+        } else if (str[i] === "V") {
+            num+=5;
+        } else if (str[i] === "I") {
+            num++;
+        }
+    }
+    console.log(num)
+    return num;
+};
+
+romanToInt(str);
