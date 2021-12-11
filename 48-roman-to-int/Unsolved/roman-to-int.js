@@ -32,12 +32,16 @@
 // if there is an I after the V, add 1
 // if there is an I add 1
 
-var str = "DCC";
+var str = "MMXXIV";
 
 var romanToInt = function(str) {
     var num = 0;
     for (var i = 0; i < str.length; i++) {
-        if (str[i] === "C" && str[i+1] ==="D"){
+        if (str[i] === "C" && str[i+1] ==="M"){
+            num-=100;
+        } else if (str[i] === "M") {
+            num+=1000;
+        } else if (str[i] === "C" && str[i+1] ==="D"){
             num-=100;
         } else if (str[i] === "D") {
             num+=500;
