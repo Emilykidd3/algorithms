@@ -9,7 +9,13 @@
 var words = ["cool", "cat"];
 
 var rotationPoint = function(words) {
-    for (var i = 0; i < words.length; i++) {
+    var rotationNum = 0;
+    for (var i = 0; i < words.length-1; i++) {
+        if (words[i][0] < words[i+1][0]){
+            console.log("before")
+        } else if (words[i][0]===words[i+1][0]){
+            console.log("equal")
+        }
         console.log(words[i][0]);
     }
 };
