@@ -14,7 +14,9 @@ var rotationPoint = function(words) {
         if (words[i][0] < words[i+1][0]){
             console.log("before")
         } else if (words[i][0]===words[i+1][0]){
-            console.log("equal")
+            for (var j=0; j < words[i].length && i<words[i+1].length; j++){
+                console.log("here")
+            }
         }
         console.log(words[i][0]);
     }
