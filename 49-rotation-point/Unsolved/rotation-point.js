@@ -6,13 +6,14 @@
 // if numerical value of string is greater than string+1 add index to variable
 // return variable
 
-var words = ["great", "ostrich", "panther", "ruby", "chosen", "feathers"];
+var words = ["cool", "cat"];
 
 var rotationPoint = function(words) {
     var rotationNum = 0;
     for (var i = 0; i < words.length-1; i++) {
         if (words[i][0] > words[i+1][0]){
-            console.log("before")
+            console.log(i+1)
+            return;
         } else if (words[i][0]===words[i+1][0]){
             for (var j=0; j < words[i].length && i<words[i+1].length; j++){
                 if (words[i][j] > words[i+1][j]){
@@ -23,8 +24,6 @@ var rotationPoint = function(words) {
                     return -1;
                 }
             }
-        } else {
-            console.log("here")
         }
     }
     console.log(-1);
