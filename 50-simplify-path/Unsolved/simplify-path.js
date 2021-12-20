@@ -22,7 +22,10 @@ var simplifyPath = function(path) {
         return "/";
     }
     for (var i = 0; i < path.length; i++) {
-        console.log("here")
+        if (path[path.length-1] === "/") {
+            path = path.slice(0, path.length-1);
+            console.log(path);
+        }
     }
 };
 
