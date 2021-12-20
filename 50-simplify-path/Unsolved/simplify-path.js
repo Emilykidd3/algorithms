@@ -13,4 +13,17 @@
 // if there is /. take it out
 // if there is a / at the end, remove it
 
-var simplifyPath = function(path) {};
+var path = "/a/../../b/../c//.//"
+// should return "/C"
+
+var simplifyPath = function(path) {
+    if (path === ""){
+        console.log("/");
+        return "/";
+    }
+    for (var i = 0; i < path.length; i++) {
+        console.log("here")
+    }
+};
+
+simplifyPath(path);
