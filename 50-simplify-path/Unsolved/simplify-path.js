@@ -25,15 +25,19 @@ var simplifyPath = function(path) {
         if (path[path.length-1] === "/") {
             path = path.slice(0, path.length-1);
             console.log(path)
-        } else if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
+        }
+    }
+    for (var i = 0; i<path.length; i++) {
+        if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
             console.log("here")
             var path1 = path.substr(0, i-1);
             var path2 = path.substr(i+3, path.length);
             path = path1+path2;
             console.log(path)
+            i-=3;
         } 
-        // path = path.replace("/.", "");
     }
+    // path = path.replace("/.", "");
 };
 
 simplifyPath(path);
