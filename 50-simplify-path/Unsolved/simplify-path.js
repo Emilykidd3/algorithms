@@ -24,20 +24,26 @@ var simplifyPath = function(path) {
     for (var i = 0; i < path.length; i++) {
         if (path[path.length-1] === "/") {
             path = path.slice(0, path.length-1);
-            console.log(path)
         }
     }
     for (var i = 0; i<path.length; i++) {
         if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
-            console.log("here")
             var path1 = path.substr(0, i-1);
             var path2 = path.substr(i+3, path.length);
             path = path1+path2;
-            console.log(path)
             i-=3;
         } 
     }
-    // path = path.replace("/.", "");
+    for (var i = 0; i<path.length; i++) {
+        if (path[i] === "/" && path[i+1] === "."){
+            console.log("here");
+            var path1 = path.substr(0, i);
+            var path2 = path.substr(i+2, path.length);
+            path = path1+path2;
+            i-=2;
+        }      
+    }
+    console.log(path);
 };
 
 simplifyPath(path);
