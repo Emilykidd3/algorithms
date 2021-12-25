@@ -43,6 +43,11 @@ var simplifyPath = function(path) {
             i-=2;
         }      
     }
+    for (var i = 0; i<path.length; i++) {
+        if (path[0] === "/" && path [1] === "/") {
+            path = path.substr(1, path.length);
+        }
+    }
     console.log(path);
 };
 
