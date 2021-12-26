@@ -13,7 +13,7 @@
 // if there is /. take it out
 // if there is a / at the end, remove it
 
-var path = "/a/../../b/../c//.//"
+var path = "/a/b/c/d/.."
 // should return "/C"
 
 var simplifyPath = function(path) {
@@ -36,7 +36,6 @@ var simplifyPath = function(path) {
     }
     for (var i = 0; i<path.length; i++) {
         if (path[i] === "/" && path[i+1] === "."){
-            console.log("here");
             var path1 = path.substr(0, i);
             var path2 = path.substr(i+2, path.length);
             path = path1+path2;
@@ -46,6 +45,11 @@ var simplifyPath = function(path) {
     for (var i = 0; i<path.length; i++) {
         if (path[0] === "/" && path [1] === "/") {
             path = path.substr(1, path.length);
+        }
+    }
+    for (var i=0; i < path.length; i++){
+        if (path[path.length-1] === "/"){
+            path = path.substr(0, path.length-1)
         }
     }
     console.log(path);
