@@ -13,7 +13,11 @@
 // if there is /. take it out
 // if there is a / at the end, remove it
 
-var path = "/a/../../b/../c//.//"
+// pseudocode
+// two periods make you go back a directory
+// one period keeps you in the same directory
+
+var path = "/a/b/c/d/.."
 // should return "/C"
 
 var simplifyPath = function(path) {
