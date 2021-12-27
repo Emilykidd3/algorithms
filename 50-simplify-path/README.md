@@ -9,7 +9,7 @@ Writing a code to create a function that takes in a string representing an absol
     - For example, if given the following path:
 
     ```js
-    var path = "/home/";
+    var path = "/home/..";
     ```
 
     - The following should be returned:
