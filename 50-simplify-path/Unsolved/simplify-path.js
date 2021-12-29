@@ -17,7 +17,7 @@
 // two periods make you go back a directory
 // one period keeps you in the same directory
 
-var path = "/a/b/c/ddd/.."
+var path = "/a/./b/../../c/"
 // should return "/C"
 
 var simplifyPath = function(path) {
@@ -25,6 +25,7 @@ var simplifyPath = function(path) {
         console.log("/");
         return "/";
     }
+
     for (var i = 0; i < path.length; i++) {
         if (path[path.length-1] === "/") {
             path = path.slice(0, path.length-1);
@@ -33,9 +34,9 @@ var simplifyPath = function(path) {
 
     for (var i = 0; i<path.length; i++) {
         if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
-            var amountToSubtract = 0;
             for (var j=0; j<path.length-i+1;j++) {
-                if (path[i-j] != "/" && path[i-j] != "."){
+                var amountToSubtract = 0;
+                if (path[i-j] != "/" && path[i-j] != "." && path[i-j]){
                     amountToSubtract +=1
                 }
                 console.log(path[i-j], amountToSubtract);
@@ -53,6 +54,8 @@ var simplifyPath = function(path) {
             }
         } 
     }
+    console.log(path)
+
     for (var i = 0; i<path.length; i++) {
         if (path[i] === "/" && path[i+1] === "."){
             if (path.length > 2) {
