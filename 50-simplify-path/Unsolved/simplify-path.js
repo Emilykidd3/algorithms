@@ -5,7 +5,7 @@
 // . keeps in same directory
 // / at the beginning takes you to the root directory
 // / at the end does nothing?
-// 
+//
 
 // pseudocode
 // if empty return "/"
@@ -17,68 +17,117 @@
 // two periods make you go back a directory
 // one period keeps you in the same directory
 
-var path = "/a/./b/../../c/"
+var path = "/a/./b/../../c/";
 // should return "/C"
 
-var simplifyPath = function(path) {
-    if (path === ""){
-        console.log("/");
-        return "/";
+var simplifyPath = function (path) {
+  // returns a / if there is nothing in the string
+  if (path === "") {
+    console.log("/");
+    return "/";
+  }
+
+  // removed /s at the end if there are any
+  for (var i = 0; i < path.length; i++) {
+    if (path[path.length - 1] === "/") {
+      path = path.slice(0, path.length - 1);
+    }
+  }
+
+  // removes /. in the path if there are any, but not /..
+  for (var i = 0; i < path.length; i++) {
+    if (path[i] === "/" && path[i + 1] === "." && path[i + 2] != ".") {
+      if (path.length > 2) {
+        var path1 = path.substr(0, i);
+        var path2 = path.substr(i + 2, path.length);
+        path = path1 + path2;
+        i -= 2;
+      } else {
+        path = "/";
+      }
+    }
+  }
+
+  // removes /.. and letters before it if there are any
+  for (var i = 0; i < path.length; i++) {
+    // if path of i is X/..
+    // for loop and get an amount to subtract
+    // remove X/..
+    // if path of i is //.. ./..
+    // remove /..
+    // if path of i is /..
+    // remove ..
+
+    if (
+      path[i - 1] &&
+      path[i - 1] != "/" &&
+      path[i - 1] != "." &&
+      path[i] === "/" &&
+      path[i + 1] === "." &&
+      path[i + 2] === "."
+    ) {
+      for (var j = 0; j < path.length - i + 1; j++) {
+        var amountToSubtract = 0;
+        if (path[i - j] != "/" && path[i - j] != "." && path[i - j]) {
+          amountToSubtract += 1;
+        }
+        console.log(path[i - j], amountToSubtract);
+      }
+      if (path[i - 1] && path[i - 1] != "." && path[i - 1] != "/") {
+        console.log("here");
+        var path1 = path.substr(0, i - amountToSubtract);
+        var path2 = path.substr(i + 3, path.length);
+        path = path1 + path2;
+        i -= 1;
+      }
+    } else if (!path[i - 1] && path[i+3]) {
+        console.log("here")
+      var path1 = path.substr(0, i + 1);
+      var path2 = path.substr(i + 3, path.length);
+      path = path1 + path2;
+      i -= 1;
+    } else if (!path[i - 1]) {
+        console.log("here")
+      var path1 = path.substr(0, i + 1);
+      var path2 = path.substr(i + 3, path.length);
+      path = path1 + path2;
     }
 
-    for (var i = 0; i < path.length; i++) {
-        if (path[path.length-1] === "/") {
-            path = path.slice(0, path.length-1);
-        }
-    }
+    // if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
+    //     for (var j=0; j<path.length-i+1;j++) {
+    //         var amountToSubtract = 0;
+    //         if (path[i-j] != "/" && path[i-j] != "." && path[i-j]){
+    //             amountToSubtract +=1
+    //         }
+    //         console.log(path[i-j], amountToSubtract);
+    //     }
+    //     if (path[i-1] && path[i-1] != "." && path[i-1] != "/"){
+    //         console.log("here")
+    //         var path1 = path.substr(0, i - amountToSubtract);
+    //         var path2 = path.substr(i+3, path.length);
+    //         path = path1+path2;
+    //         i-=3;
+    //     } else if (!path[i-1]) {
+    //         var path1 = path.substr(0, i+1);
+    //         var path2 = path.substr(i+3, path.length);
+    //         path = path1+path2;
+    //         i-=3;
+    //     }
+    // }
+  }
 
-    for (var i = 0; i<path.length; i++) {
-        if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
-            for (var j=0; j<path.length-i+1;j++) {
-                var amountToSubtract = 0;
-                if (path[i-j] != "/" && path[i-j] != "." && path[i-j]){
-                    amountToSubtract +=1
-                }
-                console.log(path[i-j], amountToSubtract);
-            }
-            if (path[i-1] && path[i-1] != "." && path[i-1] != "/"){
-                var path1 = path.substr(0, i - amountToSubtract);
-                var path2 = path.substr(i+3, path.length);
-                path = path1+path2;
-                i-=3;
-            } else if (!path[i-1]) {
-                var path1 = path.substr(0, i+1);
-                var path2 = path.substr(i+3, path.length);
-                path = path1+path2;
-                i-=3;
-            }
-        } 
-    }
-    console.log(path)
+  // for (var i = 0; i<path.length; i++) {
+  //     if (path[0] === "/" && path [1] === "/") {
+  //         path = path.substr(1, path.length);
+  //     }
+  // }
 
-    for (var i = 0; i<path.length; i++) {
-        if (path[i] === "/" && path[i+1] === "."){
-            if (path.length > 2) {
-                var path1 = path.substr(0, i);
-                var path2 = path.substr(i+2, path.length);
-                path = path1+path2;
-                i-=2;
-            } else {
-                path = "/";
-            }
-        }
-    }
-    for (var i = 0; i<path.length; i++) {
-        if (path[0] === "/" && path [1] === "/") {
-            path = path.substr(1, path.length);
-        }
-    }
-    for (var i=0; i < path.length; i++){
-        if (path[path.length-1] === "/" && path.length > 1){
-            path = path.substr(0, path.length-1)
-        }
-    }
-    console.log(path);
+  // for (var i=0; i < path.length; i++){
+  //     if (path[path.length-1] === "/" && path.length > 1){
+  //         path = path.substr(0, path.length-1)
+  //     }
+  // }
+  console.log(path);
 };
 
 simplifyPath(path);
