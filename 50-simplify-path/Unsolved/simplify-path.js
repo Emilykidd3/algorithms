@@ -67,7 +67,7 @@ var simplifyPath = function (path) {
       path[i + 2] === "."
     ) {
       var amountToSubtract = 0;
-      for (var j = 0; j < path.length - i + 1; j++) {
+      for (var j = 0; j <= path.length - i + 1; j++) {
         if (path[i - j] != "/" && path[i - j] != "." && path[i - j]) {
           amountToSubtract += 1;
         }
@@ -92,28 +92,6 @@ var simplifyPath = function (path) {
       var path2 = path.substr(i + 3, path.length);
       path = path1 + path2;
     }
-
-    // if (path[i] === "/" && path[i+1] === "." && path[i+2] === "."){
-    //     for (var j=0; j<path.length-i+1;j++) {
-    //         var amountToSubtract = 0;
-    //         if (path[i-j] != "/" && path[i-j] != "." && path[i-j]){
-    //             amountToSubtract +=1
-    //         }
-    //         console.log(path[i-j], amountToSubtract);
-    //     }
-    //     if (path[i-1] && path[i-1] != "." && path[i-1] != "/"){
-    //         console.log("here")
-    //         var path1 = path.substr(0, i - amountToSubtract);
-    //         var path2 = path.substr(i+3, path.length);
-    //         path = path1+path2;
-    //         i-=3;
-    //     } else if (!path[i-1]) {
-    //         var path1 = path.substr(0, i+1);
-    //         var path2 = path.substr(i+3, path.length);
-    //         path = path1+path2;
-    //         i-=3;
-    //     }
-    // }
   }
 
   // if there are two / in a row, delete the first one
