@@ -11,7 +11,7 @@
 // if arr[arr.length] is 9, set it equal to 0, (or subtract 9?) and move on to previous number
 // if there is no number before add one in using 
 
-var digits = [1, 2, 3];
+var digits = [1, 9, 9, 9];
 
 var plusOne = function(digits) {
     for (var i = digits.length-1; i >= 0; i--){
@@ -19,8 +19,13 @@ var plusOne = function(digits) {
             digits[i]+=1;
             console.log(digits);
             return digits;
+        } else {
+            digits[i] = 0;
         }
     }
+    digits.unshift(1)
+    console.log(digits);
+    return digits;
 };
 
 plusOne(digits);
