@@ -15,7 +15,7 @@
 
 var arr1 = [1, 0];
 
-var arr2 = [1, 2, 1];
+var arr2 = [1, 1];
 
 var sumArrayDigits = function(arr1, arr2) {
     var newArr = [];
@@ -25,8 +25,12 @@ var sumArrayDigits = function(arr1, arr2) {
         arr2 = switchArr;
     }
     for (var i = 1; i <= arr1.length ; i++){
-        
+        if (typeof(arr1[arr1.length - i]) === "number" && typeof(arr2[arr2.length - i]) === "number"){
+            var numberToAdd = arr1[arr1.length - i] + arr2[arr2.length - i];
+            newArr.unshift(numberToAdd);
+        }
     }
+    console.log(newArr);
 };
 
 sumArrayDigits(arr1, arr2)
