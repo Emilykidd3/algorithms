@@ -13,9 +13,9 @@
 // if arr1 exists and arr2 doesnt or opposite
 // unshift number to newArr
 
-var arr1 = [1, 0];
+var arr1 = [1, 8];
 
-var arr2 = [1, 1];
+var arr2 = [1, 8];
 
 var sumArrayDigits = function(arr1, arr2) {
     var newArr = [];
@@ -27,8 +27,12 @@ var sumArrayDigits = function(arr1, arr2) {
     for (var i = 1; i <= arr1.length ; i++){
         if (typeof(arr1[arr1.length - i]) === "number" && typeof(arr2[arr2.length - i]) === "number"){
             var numberToAdd = arr1[arr1.length - i] + arr2[arr2.length - i];
-            newArr.unshift(numberToAdd);
-        }
+            if (numberToAdd <= 9){
+                newArr.unshift(numberToAdd);
+            } else {
+                newArr.unshift(numberToAdd % 10)
+            }
+        } 
     }
     console.log(newArr);
 };
