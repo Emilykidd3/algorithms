@@ -15,10 +15,18 @@
 
 var arr1 = [1, 0];
 
-var arr2 = [1];
+var arr2 = [1, 2, 1];
 
 var sumArrayDigits = function(arr1, arr2) {
     var newArr = [];
+    if (arr1.length < arr2.length){
+        var switchArr = arr1;
+        arr1 = arr2;
+        arr2 = switchArr;
+    }
+    for (var i = 1; i <= arr1.length ; i++){
+        
+    }
 };
 
 sumArrayDigits(arr1, arr2)
