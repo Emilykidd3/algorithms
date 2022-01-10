@@ -13,9 +13,9 @@
 // if arr1 exists and arr2 doesnt or opposite
 // unshift number to newArr
 
-var arr1 = [1, 8];
+var arr1 = [8];
 
-var arr2 = [1, 8];
+var arr2 = [8];
 
 var sumArrayDigits = function(arr1, arr2) {
     var newArr = [];
@@ -37,7 +37,9 @@ var sumArrayDigits = function(arr1, arr2) {
                     arr1.unshift(1);
                 }
             }
-        } 
+        } else {
+            newArr.unshift(arr1[arr1.length - i]);
+        }
     }
     console.log(newArr);
 };
