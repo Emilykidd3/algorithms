@@ -31,6 +31,11 @@ var sumArrayDigits = function(arr1, arr2) {
                 newArr.unshift(numberToAdd);
             } else {
                 newArr.unshift(numberToAdd % 10)
+                if (typeof(arr1[arr1.length - i - 1]) === "number"){
+                    arr1[arr1.length - i - 1] += 1;
+                } else {
+                    arr1.unshift(1);
+                }
             }
         } 
     }
