@@ -9,4 +9,24 @@
 // at end if variable does not equal to 1 return false
 // else return true
 
-var oneEditAway = function(str1, str2) {};
+var str1 = "Hello";
+var str2 = "Henlo";
+
+var oneEditAway = function(str1, str2) {
+    var edits = 0;
+    if (str1 === str2){
+        console.log(false);
+        return false;
+    }
+    for (var i = 0; i < str1.length; i++){
+        if (str1[i] != str2[i]){
+            edits+=1;
+        }
+    }
+    if (edits === 1){
+        console.log(true);
+        return true;
+    }
+};
+
+oneEditAway(str1, str2);
