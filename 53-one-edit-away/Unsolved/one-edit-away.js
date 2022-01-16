@@ -10,15 +10,15 @@
 // else return true
 
 var str1 = "Hello";
-var str2 = "Henlo";
+var str2 = "Hell";
 
 var oneEditAway = function(str1, str2) {
     var edits = 0;
     if (str1 === str2){
-        console.log(false);
+        console.log("same string, false");
         return false;
     }
-    if (str1.length != str2.length || str1.length != str2.length + 1 || str1.length != str2.length - 1) {
+    if (str1.length != str2.length && str1.length != str2.length + 1 && str1.length != str2.length - 1) {
         console.log(false);
         return false;
     }
