@@ -9,13 +9,16 @@
 // at end if variable does not equal to 1 return false
 // else return true
 
+// shifting?
+// if letter from s1 does not equal s2, but letter from s1 and next letter from st2 are the same keep looping through with str2 next letter and if the rest is the same return true
+
 var str1 = "Hello";
 var str2 = "Hell";
 
 var oneEditAway = function(str1, str2) {
     var edits = 0;
     if (str1 === str2){
-        console.log("same string, false");
+        console.log(false);
         return false;
     }
     if (str1.length != str2.length && str1.length != str2.length + 1 && str1.length != str2.length - 1) {
