@@ -13,7 +13,7 @@
 // if letter from s1 does not equal s2, but letter from s1 and next letter from st2 are the same keep looping through with str2 next letter and if the rest is the same return true
 
 var str1 = "Hello";
-var str2 = "Hell";
+var str2 = "Helo";
 
 var oneEditAway = function(str1, str2) {
     var edits = 0;
@@ -27,6 +27,18 @@ var oneEditAway = function(str1, str2) {
     }
     for (var i = 0; i < str1.length; i++){
         if (str1[i] != str2[i]){
+            // str1[i] === str2[i+1] || 
+            if (str1[i] === str2[i-1]){
+                for (var j=i; j<str1.length; j++){
+                    if (str1[j] != str2[j-1]){
+                        console.log(str1[j], str2[j-1])
+                        console.log(false);
+                        return false;
+                    } 
+                    console.log(true);
+                    return true;
+                }
+            }
             edits+=1;
         }
     }
@@ -34,6 +46,7 @@ var oneEditAway = function(str1, str2) {
         console.log(true);
         return true;
     }
+    console.log(edits);
 };
 
 oneEditAway(str1, str2);
