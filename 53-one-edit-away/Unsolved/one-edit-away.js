@@ -18,6 +18,10 @@ var oneEditAway = function(str1, str2) {
         console.log(false);
         return false;
     }
+    if (str1.length != str2.length || str1.length != str2.length + 1 || str1.length != str2.length - 1) {
+        console.log(false);
+        return false;
+    }
     for (var i = 0; i < str1.length; i++){
         if (str1[i] != str2[i]){
             edits+=1;
