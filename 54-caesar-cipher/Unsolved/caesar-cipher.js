@@ -14,7 +14,22 @@
 // join arr
 // return
 
+var str = "Hello World";
+var offset = 1;
+
 var caesarCipher = function(str, offset) {
-    
+    var arr = str.split("");
+    var str;
+    for (var i = 0; i < arr.length; i++) {
+        var charCode = arr[i].charCodeAt(0);
+        console.log(charCode);
+        if (97 <= charCode && charCode <= 122){
+            console.log("lowercase")
+        } else if (charCode === 32){
+            console.log("space");
+        } else if (65 < charCode && charCode <= 90) {
+            console.log("cap")
+        }
+    }
 };
 caesarCipher(str, offset);
