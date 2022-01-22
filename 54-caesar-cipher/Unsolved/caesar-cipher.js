@@ -14,22 +14,38 @@
 // join arr
 // return
 
-var str = "Hello World";
-var offset = 1;
+var str = "Goodbye";
+var offset = 28;
 
 var caesarCipher = function(str, offset) {
-    var arr = str.split("");
-    var str;
-    for (var i = 0; i < arr.length; i++) {
-        var charCode = arr[i].charCodeAt(0);
-        console.log(charCode);
+    while (offset >= 26){
+        offset-=26;
+    }
+    var newStr = ""
+    for (var i = 0; i < str.length; i++) {
+        var charCode = str[i].charCodeAt(0);
+        var newCharCode;
         if (97 <= charCode && charCode <= 122){
-            console.log("lowercase")
+            newCharCode = charCode + offset;
+            if (newCharCode > 122){
+                newCharCode-=26;
+            } else if (newCharCode < 97){
+                newCharCode+=26;
+            }
+            newStr=newStr+=String.fromCharCode(newCharCode);
         } else if (charCode === 32){
-            console.log("space");
-        } else if (65 < charCode && charCode <= 90) {
-            console.log("cap")
+            newStr=newStr+" ";
+        } else if (65 <= charCode && charCode <= 90) {
+            newCharCode = charCode + offset;
+            if (newCharCode > 90){
+                newCharCode-=26;
+            } else if (newCharCode < 65){
+                newCharCode+=26;
+            }
+            newStr=newStr+=String.fromCharCode(newCharCode);
         }
     }
+    console.log(newStr);
+    return newStr;
 };
 caesarCipher(str, offset);
