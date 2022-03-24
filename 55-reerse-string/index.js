@@ -5,6 +5,13 @@
 
 var arr = [1, 2, 3, 4]
 
+//using built in js arr manipulation
+function reverseArrBuiltIn(arr) {
+    arr.reverse();
+    console.log(arr);
+}
+
+// using no buitl in arr manipulation
 function reverseArr(arr) {
     var newArr = []
     for (var i = arr.length-1; i > -1; i--){
@@ -14,4 +21,6 @@ function reverseArr(arr) {
     console.log(arr);
 }
 
-reverseArr(arr)
+reverseArrBuiltIn(arr);
+
+// reverseArr(arr)
