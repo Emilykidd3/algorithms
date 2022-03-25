@@ -3,6 +3,9 @@
 // given var arr = [1, 2, 3, 4]
 // expected return is arr = [4, 3, 2, 1]
 
+
+// ARRAY REVERSE
+
 var arr = [1, 2, 3, 4]
 
 //using built in js arr manipulation
@@ -21,6 +24,15 @@ function reverseArr(arr) {
     console.log(arr);
 }
 
-reverseArrBuiltIn(arr);
+// reverseArrBuiltIn(arr);
 
 // reverseArr(arr)
+
+
+// STRING REVERSE
+var str = "1234"
+function reverseStr(str) {
+    console.log(str.split("").reverse().join(""))
+}
+
+reverseStr(str);
